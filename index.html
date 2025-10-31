@@ -4,108 +4,953 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopción de Perritos - Encuentra tu compañero perfecto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <!-- Top Right Links -->
-        <div class="top-links">
-            <a href="#" class="help-link">Ayuda Aqui</a>
-            <a href="#" class="login-link">
-                <img src="images/usuario.png" alt="Usuario" class="user-icon">
-                Iniciar sesion
-            </a>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-end py-2 border-bottom">
+                <div class="top-links d-flex gap-3">
+                    <a href="#" class="help-link text-decoration-none fw-bold">Ayuda Aqui</a>
+                    <a href="#" class="login-link text-decoration-none fw-bold d-flex align-items-center gap-2">
+                        <img src="images/usuario.png" alt="Usuario" class="user-icon" width="16" height="16">
+                        Iniciar sesion
+                    </a>
+                </div>
+            </div>
         </div>
         
-        <!-- Logo and Navigation -->
-        <div class="header-bottom">
-            <div class="logo-area">
-                <img src="images/logo.png" alt="Logo Adopción Perritos" class="logo">
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="Logo Adopción Perritos" width="60" height="60" class="rounded-circle">
+                </a>
+                
+                <!-- Mobile toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Adopta Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold px-3" href="#" id="adoptaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Adopta
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="adoptaDropdown">
+                                <li><a class="dropdown-item" href="#nuestros-perritos">Nuestros perritos</a></li>
+                                <li><a class="dropdown-item" href="#proceso-adopcion">Proceso de Adopcion</a></li>
+                                <li><a class="dropdown-item" href="#formulario-pre-adopcion">Formulario de Pre-Adopcion</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Educacion Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold px-3" href="#" id="educacionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Educacion
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="educacionDropdown">
+                                <li><a class="dropdown-item" href="#tenencia-responsable">Tenencia Responsable</a></li>
+                                <li><a class="dropdown-item" href="#problema-abandono">Problema del Abandono en Lima</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Ayudanos Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold px-3" href="#" id="ayudanosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ayudanos
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="ayudanosDropdown">
+                                <li><a class="dropdown-item" href="#donaciones">Donaciones</a></li>
+                                <li><a class="dropdown-item" href="#voluntariado">Voluntariado</a></li>
+                                <li><a class="dropdown-item" href="#hogares-temporales">Hogares Temporales</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Nosotros Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold px-3" href="#" id="nosotrosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nosotros
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="nosotrosDropdown">
+                                <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li class="nav-item">
-                        <a href="#adopta">Adopta</a>
-                        <ul class="dropdown">
-                            <li><a href="#nuestros-perritos">Nuestros perritos</a></li>
-                            <li><a href="#proceso-adopcion">Proceso de Adopcion</a></li>
-                            <li><a href="#formulario-pre-adopcion">Formulario de Pre-Adopcion</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#educacion">Educacion</a>
-                        <ul class="dropdown">
-                            <li><a href="#tenencia-responsable">Tenencia Responsable</a></li>
-                            <li><a href="#problema-abandono">Problema del Abandono en Lima</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#ayudanos">Ayudanos</a>
-                        <ul class="dropdown">
-                            <li><a href="#donaciones">Donaciones</a></li>
-                            <li><a href="#voluntariado">Voluntariado</a></li>
-                            <li><a href="#hogares-temporales">Hogares Temporales</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#nosotros">Nosotros</a>
-                        <ul class="dropdown">
-                            <li><a href="#contacto">Contacto</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-        <div class="content-container">
-            <!-- Left Section -->
-            <section class="left-section">
-                <div class="image-container">
-                    <img src="images/perro_callejero.png" alt="Perro callejero buscando hogar" class="dog-image">
-                </div>
-                <div class="content-space">
-                    <!-- Empty space for future content -->
-                </div>
-            </section>
+    <!-- Hero Alert Section -->
+    <section class="hero-alerts py-3 bg-light border-bottom">
+        <div class="container">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                <strong>¡Ayuda Urgente!</strong> Tenemos más de 50 perritos esperando un hogar. ¿Puedes ayudar?
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </section>
 
-            <!-- Right Section -->
-            <section class="right-section">
-                <div class="image-container">
-                    <img src="images/jovenes_con_perros.png" alt="Jóvenes interactuando con perros en un parque" class="people-dogs-image">
+    <!-- Search and Filter Section -->
+    <section class="search-filter py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="row g-3 align-items-end">
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="searchName" class="form-label fw-semibold">
+                                        <i class="bi bi-search me-1"></i>Buscar por nombre
+                                    </label>
+                                    <input type="text" class="form-control" id="searchName" placeholder="Ej: Max, Luna...">
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <label for="filterBreed" class="form-label fw-semibold">
+                                        <i class="bi bi-funnel me-1"></i>Raza
+                                    </label>
+                                    <select class="form-select" id="filterBreed">
+                                        <option selected value="">Todas</option>
+                                        <option value="golden">Golden Retriever</option>
+                                        <option value="border">Border Collie</option>
+                                        <option value="pastor">Pastor Alemán</option>
+                                        <option value="labrador">Labrador</option>
+                                        <option value="beagle">Beagle</option>
+                                        <option value="cocker">Cocker Spaniel</option>
+                                        <option value="husky">Husky</option>
+                                        <option value="mestizo">Mestizo</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <label for="filterAge" class="form-label fw-semibold">
+                                        <i class="bi bi-calendar me-1"></i>Edad
+                                    </label>
+                                    <select class="form-select" id="filterAge">
+                                        <option selected value="">Todas</option>
+                                        <option value="puppy">Cachorro (0-1 año)</option>
+                                        <option value="young">Joven (1-3 años)</option>
+                                        <option value="adult">Adulto (3-7 años)</option>
+                                        <option value="senior">Senior (7+ años)</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <label for="filterSize" class="form-label fw-semibold">
+                                        <i class="bi bi-rulers me-1"></i>Tamaño
+                                    </label>
+                                    <select class="form-select" id="filterSize">
+                                        <option selected value="">Todos</option>
+                                        <option value="small">Pequeño</option>
+                                        <option value="medium">Mediano</option>
+                                        <option value="large">Grande</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-12">
+                                    <div class="d-flex gap-2">
+                                        <button type="button" class="btn btn-primary flex-fill" id="applyFilters">
+                                            <i class="bi bi-funnel-fill me-2"></i>Filtrar
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary" id="clearFilters">
+                                            <i class="bi bi-x-circle me-2"></i>Limpiar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="content-space">
-                    <!-- Empty space for future content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dog Gallery Carousel -->
+    <section class="dog-gallery py-5 bg-white">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold text-primary mb-3">Conoce a Nuestros Perritos</h2>
+                    <p class="lead text-muted">Estos adorables amigos están esperando encontrar su hogar perfecto</p>
+                    <div class="search-results mt-3" id="searchResults" style="display: none;">
+                        <div class="alert alert-info d-inline-flex align-items-center">
+                            <i class="bi bi-info-circle me-2"></i>
+                            <span id="resultsText">Se encontraron 8 perritos</span>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+            
+            <div id="dogCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#dogCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#dogCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#dogCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/perro_callejero.png" class="card-img-top dog-carousel-img" alt="Max - Golden Retriever">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-2">Disponible</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Max</h5>
+                                        <p class="card-text text-muted">Golden Retriever • 3 años • Macho</p>
+                                        <p class="card-text">Perro cariñoso y juguetón, perfecto para familias con niños.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="max">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                                <i class="bi bi-heart me-1"></i>Adoptar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/perro_callejero.png" class="card-img-top dog-carousel-img" alt="Luna - Border Collie">
+                                        <span class="badge bg-warning position-absolute top-0 end-0 m-2">Reservado</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Luna</h5>
+                                        <p class="card-text text-muted">Border Collie • 2 años • Hembra</p>
+                                        <p class="card-text">Muy inteligente y activa, ideal para personas deportistas.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="luna">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-secondary btn-sm" disabled>
+                                                <i class="bi bi-clock me-1"></i>Reservado
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/perro_callejero.png" class="card-img-top dog-carousel-img" alt="Rocky - Pastor Alemán">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-2">Disponible</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Rocky</h5>
+                                        <p class="card-text text-muted">Pastor Alemán • 4 años • Macho</p>
+                                        <p class="card-text">Leal y protector, excelente guardián y compañero.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="rocky">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                                <i class="bi bi-heart me-1"></i>Adoptar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/jovenes_con_perros.png" class="card-img-top dog-carousel-img" alt="Bella - Labrador">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-2">Disponible</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Bella</h5>
+                                        <p class="card-text text-muted">Labrador • 1 año • Hembra</p>
+                                        <p class="card-text">Cachorra llena de energía, le encanta jugar y aprender.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="bella">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                                <i class="bi bi-heart me-1"></i>Adoptar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/jovenes_con_perros.png" class="card-img-top dog-carousel-img" alt="Toby - Beagle">
+                                        <span class="badge bg-info position-absolute top-0 end-0 m-2">Especial</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Toby</h5>
+                                        <p class="card-text text-muted">Beagle • 5 años • Macho</p>
+                                        <p class="card-text">Perro senior muy tranquilo, perfecto para adultos mayores.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="toby">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                                <i class="bi bi-heart me-1"></i>Adoptar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/jovenes_con_perros.png" class="card-img-top dog-carousel-img" alt="Coco - Cocker Spaniel">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-2">Disponible</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Coco</h5>
+                                        <p class="card-text text-muted">Cocker Spaniel • 3 años • Hembra</p>
+                                        <p class="card-text">Dulce y cariñosa, se lleva bien con otros animales.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="coco">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                                <i class="bi bi-heart me-1"></i>Adoptar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/perro_callejero.png" class="card-img-top dog-carousel-img" alt="Zeus - Husky">
+                                        <span class="badge bg-danger position-absolute top-0 end-0 m-2">Urgente</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Zeus</h5>
+                                        <p class="card-text text-muted">Husky Siberiano • 6 años • Macho</p>
+                                        <p class="card-text">Necesita urgente un hogar con patio grande y experiencia.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="zeus">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                                <i class="bi bi-heart-fill me-1"></i>¡Adoptar Ya!
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dog-card h-100 shadow-sm">
+                                    <div class="position-relative">
+                                        <img src="images/jovenes_con_perros.png" class="card-img-top dog-carousel-img" alt="Miel - Mestizo">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-2">Disponible</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Miel</h5>
+                                        <p class="card-text text-muted">Mestizo • 2 años • Hembra</p>
+                                        <p class="card-text">Rescatada de la calle, muy agradecida y fiel.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dogProfileModal" data-dog="miel">
+                                                <i class="bi bi-eye me-1"></i>Ver Perfil
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                                <i class="bi bi-heart me-1"></i>Adoptar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#dogCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#dogCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="main-content py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Left Section -->
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm border-2">
+                        <div class="card-body p-4">
+                            <div class="image-container mb-4">
+                                <img src="images/perro_callejero.png" alt="Perro callejero buscando hogar" class="img-fluid rounded dog-image">
+                            </div>
+                            <div class="content-space bg-light rounded p-4 text-center" style="min-height: 200px;">
+                                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                                    <h4 class="text-primary mb-3">¿Quieres Adoptar?</h4>
+                                    <p class="text-muted mb-4">Dale una segunda oportunidad a un perrito que necesita un hogar lleno de amor.</p>
+                                    <div class="d-flex gap-2 flex-wrap justify-content-center">
+                                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                                            <i class="bi bi-heart-fill me-2"></i>Adoptar Ahora
+                                        </button>
+                                        <button type="button" class="btn btn-outline-primary btn-lg">
+                                            <i class="bi bi-search me-2"></i>Ver Perritos
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm border-2">
+                        <div class="card-body p-4">
+                            <div class="image-container mb-4">
+                                <img src="images/jovenes_con_perros.png" alt="Jóvenes interactuando con perros en un parque" class="img-fluid rounded people-dogs-image">
+                            </div>
+                            <div class="content-space bg-light rounded p-4 text-center" style="min-height: 200px;">
+                                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                                    <h4 class="text-success mb-3">¡Únete a Nuestra Comunidad!</h4>
+                                    <p class="text-muted mb-4">Ayúdanos a crear un mundo mejor para los perritos abandonados. Cada granito de arena cuenta.</p>
+                                    <div class="d-flex gap-2 flex-wrap justify-content-center">
+                                        <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#volunteerModal">
+                                            <i class="bi bi-people-fill me-2"></i>Ser Voluntario
+                                        </button>
+                                        <button type="button" class="btn btn-outline-success btn-lg">
+                                            <i class="bi bi-gift-fill me-2"></i>Donar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold text-primary mb-3">Historias de Éxito</h2>
+                    <p class="lead text-muted">Conoce las experiencias de familias que encontraron a su compañero perfecto</p>
+                </div>
+            </div>
+            
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="card border-0 shadow-lg">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="mb-4">
+                                            <img src="images/jovenes_con_perros.png" alt="Familia testimonial" class="rounded-circle testimonial-img mb-3">
+                                        </div>
+                                        <blockquote class="blockquote mb-4">
+                                            <p class="fs-5 text-muted fst-italic">
+                                                "Adoptar a Max fue la mejor decisión que tomamos como familia. Es increíblemente cariñoso con nuestros hijos y se adaptó perfectamente a nuestro hogar. El proceso de adopción fue muy profesional y nos sintieron muy acompañados."
+                                            </p>
+                                        </blockquote>
+                                        <footer class="blockquote-footer">
+                                            <strong class="text-primary">Familia Rodríguez</strong>
+                                            <br>
+                                            <small class="text-muted">Adoptaron a Max en Enero 2024</small>
+                                            <div class="mt-2">
+                                                <span class="badge bg-warning me-1">Golden Retriever</span>
+                                                <span class="badge bg-success">Adopción Exitosa</span>
+                                            </div>
+                                        </footer>
+                                        <div class="mt-3">
+                                            <div class="d-flex justify-content-center">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="card border-0 shadow-lg">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="mb-4">
+                                            <img src="images/perro_callejero.png" alt="Familia testimonial" class="rounded-circle testimonial-img mb-3">
+                                        </div>
+                                        <blockquote class="blockquote mb-4">
+                                            <p class="fs-5 text-muted fst-italic">
+                                                "Luna llegó a nuestras vidas cuando más la necesitábamos. Su inteligencia y lealtad nos han sorprendido cada día. Gracias al equipo de adopción por ayudarnos a encontrar a nuestra compañera perfecta."
+                                            </p>
+                                        </blockquote>
+                                        <footer class="blockquote-footer">
+                                            <strong class="text-primary">Carlos y María</strong>
+                                            <br>
+                                            <small class="text-muted">Adoptaron a Luna en Marzo 2024</small>
+                                            <div class="mt-2">
+                                                <span class="badge bg-primary me-1">Border Collie</span>
+                                                <span class="badge bg-success">Adopción Exitosa</span>
+                                            </div>
+                                        </footer>
+                                        <div class="mt-3">
+                                            <div class="d-flex justify-content-center">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="card border-0 shadow-lg">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="mb-4">
+                                            <img src="images/jovenes_con_perros.png" alt="Familia testimonial" class="rounded-circle testimonial-img mb-3">
+                                        </div>
+                                        <blockquote class="blockquote mb-4">
+                                            <p class="fs-5 text-muted fst-italic">
+                                                "Como voluntarios, hemos sido testigos del increíble trabajo que hace esta organización. Decidimos adoptar a Bella después de cuidarla temporalmente, y ahora no podemos imaginar nuestras vidas sin ella."
+                                            </p>
+                                        </blockquote>
+                                        <footer class="blockquote-footer">
+                                            <strong class="text-primary">Ana y Diego</strong>
+                                            <br>
+                                            <small class="text-muted">Adoptaron a Bella en Mayo 2024</small>
+                                            <div class="mt-2">
+                                                <span class="badge bg-success me-1">Labrador</span>
+                                                <span class="badge bg-info">Voluntarios Activos</span>
+                                            </div>
+                                        </footer>
+                                        <div class="mt-3">
+                                            <div class="d-flex justify-content-center">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev testimonial-control" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next testimonial-control" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 mb-4">
+                    <h2 class="fw-bold">Nuestro Impacto</h2>
+                    <p class="lead">Juntos hemos logrado cambiar muchas vidas</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <i class="bi bi-heart-fill display-4 mb-3"></i>
+                        <h3 class="fw-bold">1,247</h3>
+                        <p class="mb-0">Perros Adoptados</p>
+                        <div class="progress mt-2" style="height: 6px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <i class="bi bi-people-fill display-4 mb-3"></i>
+                        <h3 class="fw-bold">342</h3>
+                        <p class="mb-0">Voluntarios Activos</p>
+                        <div class="progress mt-2" style="height: 6px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <i class="bi bi-house-fill display-4 mb-3"></i>
+                        <h3 class="fw-bold">89</h3>
+                        <p class="mb-0">Hogares Temporales</p>
+                        <div class="progress mt-2" style="height: 6px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <i class="bi bi-currency-dollar display-4 mb-3"></i>
+                        <h3 class="fw-bold">S/. 45,890</h3>
+                        <p class="mb-0">Donaciones Recaudadas</p>
+                        <div class="progress mt-2" style="height: 6px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="follow-text">Siguenos:</p>
-            <div class="social-icons">
-                <a href="#" class="social-link">
-                    <img src="images/facebook.png" alt="Facebook" class="social-icon">
-                </a>
-                <a href="#" class="social-link">
-                    <img src="images/instagram.png" alt="Instagram" class="social-icon">
-                </a>
-                <a href="#" class="social-link">
-                    <img src="images/youtube.png" alt="YouTube" class="social-icon">
-                </a>
-                <a href="#" class="social-link">
-                    <img src="images/tiktok.png" alt="TikTok" class="social-icon">
-                </a>
+    <footer class="footer bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="follow-text fs-5 fw-semibold mb-3">Siguenos:</p>
+                    <div class="social-icons d-flex justify-content-center gap-3">
+                        <a href="#" class="social-link text-decoration-none">
+                            <img src="images/facebook.png" alt="Facebook" class="social-icon rounded" width="40" height="40">
+                        </a>
+                        <a href="#" class="social-link text-decoration-none">
+                            <img src="images/instagram.png" alt="Instagram" class="social-icon rounded" width="40" height="40">
+                        </a>
+                        <a href="#" class="social-link text-decoration-none">
+                            <img src="images/youtube.png" alt="YouTube" class="social-icon rounded" width="40" height="40">
+                        </a>
+                        <a href="#" class="social-link text-decoration-none">
+                            <img src="images/tiktok.png" alt="TikTok" class="social-icon rounded" width="40" height="40">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Adoption Modal -->
+    <div class="modal fade" id="adoptModal" tabindex="-1" aria-labelledby="adoptModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h1 class="modal-title fs-5" id="adoptModalLabel">
+                        <i class="bi bi-heart-fill me-2"></i>Formulario de Pre-Adopción
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="address" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="experience" class="form-label">¿Has tenido perros antes?</label>
+                                <select class="form-select" id="experience" required>
+                                    <option selected disabled value="">Seleccionar...</option>
+                                    <option value="yes">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="housing" class="form-label">Tipo de vivienda</label>
+                                <select class="form-select" id="housing" required>
+                                    <option selected disabled value="">Seleccionar...</option>
+                                    <option value="house">Casa</option>
+                                    <option value="apartment">Departamento</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="motivation" class="form-label">¿Por qué quieres adoptar?</label>
+                                <textarea class="form-control" id="motivation" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-send-fill me-2"></i>Enviar Solicitud
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volunteer Modal -->
+    <div class="modal fade" id="volunteerModal" tabindex="-1" aria-labelledby="volunteerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h1 class="modal-title fs-5" id="volunteerModalLabel">
+                        <i class="bi bi-people-fill me-2"></i>Formulario de Voluntariado
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="volFirstName" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="volFirstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="volLastName" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="volLastName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="volEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="volEmail" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="volPhone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="volPhone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="age" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="age" min="16" max="80" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="availability" class="form-label">Disponibilidad</label>
+                                <select class="form-select" id="availability" required>
+                                    <option selected disabled value="">Seleccionar...</option>
+                                    <option value="weekends">Fines de semana</option>
+                                    <option value="weekdays">Entre semana</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">¿En qué te gustaría ayudar?</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="care" id="care">
+                                            <label class="form-check-label" for="care">
+                                                Cuidado de perros
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="events" id="events">
+                                            <label class="form-check-label" for="events">
+                                                Eventos de adopción
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="transport" id="transport">
+                                            <label class="form-check-label" for="transport">
+                                                Transporte
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="social" id="social">
+                                            <label class="form-check-label" for="social">
+                                                Redes sociales
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Mensaje adicional</label>
+                                <textarea class="form-control" id="message" rows="3" placeholder="Cuéntanos por qué quieres ser voluntario..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">
+                        <i class="bi bi-send-fill me-2"></i>Enviar Solicitud
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dog Profile Modal -->
+    <div class="modal fade" id="dogProfileModal" tabindex="-1" aria-labelledby="dogProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h1 class="modal-title fs-4" id="dogProfileModalLabel">
+                        <i class="bi bi-info-circle-fill me-2"></i>Perfil del Perrito
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <div id="dogImageCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-inner h-100">
+                                    <div class="carousel-item active">
+                                        <img src="images/perro_callejero.png" class="d-block w-100 h-100 dog-profile-img" alt="Dog Photo 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/jovenes_con_perros.png" class="d-block w-100 h-100 dog-profile-img" alt="Dog Photo 2">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#dogImageCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#dogImageCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 h-100 d-flex flex-column">
+                                <div class="dog-info mb-4">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h2 class="text-primary mb-0" id="dogName">Max</h2>
+                                        <span class="badge bg-success fs-6" id="dogStatus">Disponible</span>
+                                    </div>
+                                    <p class="text-muted fs-5 mb-3" id="dogBreed">Golden Retriever • 3 años • Macho</p>
+                                    
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-6">
+                                            <div class="bg-light p-3 rounded text-center">
+                                                <i class="bi bi-rulers text-primary fs-4"></i>
+                                                <div class="mt-2">
+                                                    <small class="text-muted d-block">Tamaño</small>
+                                                    <strong id="dogSize">Grande</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="bg-light p-3 rounded text-center">
+                                                <i class="bi bi-activity text-success fs-4"></i>
+                                                <div class="mt-2">
+                                                    <small class="text-muted d-block">Energía</small>
+                                                    <strong id="dogEnergy">Alta</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="bg-light p-3 rounded text-center">
+                                                <i class="bi bi-people text-warning fs-4"></i>
+                                                <div class="mt-2">
+                                                    <small class="text-muted d-block">Con Niños</small>
+                                                    <strong id="dogKids">Excelente</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="bg-light p-3 rounded text-center">
+                                                <i class="bi bi-house text-info fs-4"></i>
+                                                <div class="mt-2">
+                                                    <small class="text-muted d-block">Entrenado</small>
+                                                    <strong id="dogTrained">Sí</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="dog-description flex-grow-1">
+                                    <h5 class="text-primary mb-3">Personalidad</h5>
+                                    <p id="dogPersonality" class="mb-3">
+                                        Max es un perro increíblemente cariñoso y leal. Le encanta jugar con pelotas y nadar. 
+                                        Es muy inteligente y obediente, perfecto para familias activas con niños. 
+                                        Está completamente vacunado y esterilizado.
+                                    </p>
+                                    
+                                    <h5 class="text-primary mb-3">Necesidades Especiales</h5>
+                                    <ul id="dogNeeds" class="list-unstyled">
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>Ejercicio diario (1-2 horas)</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>Patio grande o acceso a parque</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>Familia activa y comprometida</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-left me-2"></i>Volver
+                    </button>
+                    <button type="button" class="btn btn-outline-primary" id="shareProfile">
+                        <i class="bi bi-share me-2"></i>Compartir
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#adoptModal">
+                        <i class="bi bi-heart-fill me-2"></i>¡Quiero Adoptarlo!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-bell-fill text-primary me-2"></i>
+                <strong class="me-auto">Adopción de Perritos</strong>
+                <small>Ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ¡Gracias por tu interés en ayudar a nuestros perritos!
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
     <script src="js/app.js"></script>
 </body>
 </html>
